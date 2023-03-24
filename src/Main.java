@@ -91,7 +91,7 @@ public class Main {
         return false;
     }
 
-    public int determinAccountIndex(Path path, String username, String password){
+    public int determinAccountIndex(Path path, String username, String password){ // Determines the index of the logged in account
         try{
             List<String> fileContent = Files.readAllLines(path);
             int index = 0;
@@ -108,7 +108,7 @@ public class Main {
         return 0;
     }
 
-    public void dashboard(Path path, String username, String password){
+    public void dashboard(Path path, String username, String password){ // Dashboard that opens when user successfully logs into an account
         boolean inputValid = false;
 
         while(!inputValid){
@@ -129,7 +129,7 @@ public class Main {
         }
     }
 
-    public boolean deleteAccount(Path path, String username, String password){
+    public boolean deleteAccount(Path path, String username, String password){ // Deletes the account of the user
         int index = determinAccountIndex(path, username, password);
         boolean deletedAccount = false;
 
